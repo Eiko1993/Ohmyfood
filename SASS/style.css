@@ -1,0 +1,11 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --button-color: #9356DC;
+    --main-bg-color: #f3f3f3;
+    --menu-bg-color: white;
+    --footer-bg-color: rgba(53, 53, 53, 1);
+}
