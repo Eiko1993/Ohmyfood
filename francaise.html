@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood</title>
+    <title>Francaise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./SASS/style.css">
+    <link rel="stylesheet" href="./SASS/main.css">
 </head>
 
 
@@ -19,13 +22,13 @@
     <header>
         <div class="logo">
                 <a href="index.html">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-left" class="arrow"></i>
                 <img src="./Assets/Images/logo/ohmyfood.png" alt="Logo du site Ohmyfood">
                 </a>
         </div>
     </header>
     <main>
-        <section class="reservation">
+        <section class="title">
             <div>
                 <img src="./Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Francaise">
                 <h1>A la Francaise</h1>
@@ -35,31 +38,25 @@
         <section class="menu">
             <h2>ENTREES</h2>
             <div>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Tartare de poulpe acidulé</h3>
                         <p>Aux zestes d'orange</p>
-                    </div>
-                    <div>
-                         <p>25<span class="euro">€</span></p>
+                        <p>25<span class="euro">€</span></p>
                     </div>
                 </article>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Velouté de légumes d'antan</h3>
                         <p>Carotte, panais, topinambour</p>
-                    </div>
-                    <div>
-                         <p>35<span class="euro">€</span></p>
+                        <p>35<span class="euro">€</span></p>
                     </div>
                 </article>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Soupe à l'oignon</h3>
                         <p>Revisitée</p>
-                    </div>
-                    <div>
-                         <p>20<span class="euro">€</span></p>
+                        <p>20<span class="euro">€</span></p>
                     </div>
                 </article>
             </div>
@@ -67,31 +64,25 @@
         <section class="menu">
             <h2>PLATS</h2>
             <div>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Coquilles Saint-Jacques</h3>
                         <p>Accompagnées d'une purée de panais</p>
-                    </div>
-                    <div>
-                         <p>40<span class="euro">€</span></p>
+                        <p>40<span class="euro">€</span></p>
                     </div>
                 </article>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Magret de canard</h3>
                         <p>Et parmentier de pommes de terre</p>
-                    </div>
-                    <div>
-                         <p>35<span class="euro">€</span></p>
+                        <p>35<span class="euro">€</span></p>
                     </div>
                 </article>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                         <p>Sur son lit de gnocchis aux légumes</p>
-                    </div>
-                    <div>
-                         <p>44<span class="euro">€</span></p>
+                        <p>44<span class="euro">€</span></p>
                     </div>
                 </article>
             </div>
@@ -99,36 +90,30 @@
         <section class="menu">
             <h2>DESSERTS</h2>
             <div>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Pétales de violettes glacés</h3>
                         <p>Et purée de noisettes</p>
-                    </div>
-                    <div>
-                         <p>18<span class="euro">€</span></p>
+                        <p>18<span class="euro">€</span></p>
                     </div>
                 </article>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Fondant au chocolat</h3>
                         <p>Revisité</p>
-                    </div>
-                    <div>
-                         <p>22<span class="euro">€</span></p>
+                        <p>22<span class="euro">€</span></p>
                     </div>
                 </article>
-                <article>
-                    <div>
+                <article class="card">
+                    <div class="card-content">
                         <h3>Millefeuille croustillant</h3>
                         <p>Myrtilles et pâte d’amande</p>
-                    </div>
-                    <div>
-                         <p>23<span class="euro">€</span></p>
+                        <p>23<span class="euro">€</span></p>
                     </div>
                 </article>
             </div>
         </section>
-        <button class="commande">
+        <button class="buttonsearch">
             <span>Commandez</span>
         </button>
     </main>

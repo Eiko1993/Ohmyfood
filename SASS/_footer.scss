@@ -1,0 +1,36 @@
+footer{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(53, 53, 53, 1);
+    color: white;
+    
+    h3{
+        padding-left: 40px;
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    li{
+        padding-bottom: 15px;
+    }
+
+    a{
+        gap: 15px;
+        color: white;
+    }
+
+    i{
+        padding-right: 10px;
+    }
+}
+
+
+
+/***Media Queries***/
+@media (min-width: 767.98px){
+    
+}
