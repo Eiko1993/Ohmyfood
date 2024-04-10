@@ -1,4 +1,26 @@
-.menu{
+    .menu{
+    font-family: 'Roboto', sans-serif;
+
+    .logo{
+        display: flex;
+    }
+
+    .title{
+        background-color: #F6F6F6;
+        background-clip: border-box;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        
+        .resto{
+            display: flex;
+            flex-direction: row;
+            h1{
+                font-weight: 300;
+                font-size: 16px;
+            }
+        }
+    }
+
     .card{
         width: 100%;
         display: flex;
@@ -9,14 +31,17 @@
         border-radius: 15px;
     }
     .card-content{
-        display: flex;
         background-color: white;
         color: black;
         padding-left: 13px;
-        flex-direction: column;
         justify-content: space-between;
         border-radius: 15px;
     }
+
+    .prix{
+        text-align: end;
+    }
+
 
     .title{
 
@@ -25,5 +50,9 @@
         font-weight: 400;
         font-style: italic;
         }
+    }
+
+    .commande{
+        justify-content: center;
     }
 }
