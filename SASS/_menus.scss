@@ -1,26 +1,38 @@
-    .menu{
-    font-family: 'Roboto', sans-serif;
-
-    .logo{
-        display: flex;
-    }
-
-    .title{
+.title{
+        font-family: "Shrikhand", serif;
         background-color: #F6F6F6;
         background-clip: border-box;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        
+    
         .resto{
             display: flex;
             flex-direction: row;
+            
             h1{
-                font-weight: 300;
-                font-size: 16px;
+            font-size: 28px;
+            padding-left: 15px;
+            }
+
+            i{
+                text-align: end;
+                padding-left:35px;
+                padding-top:20px;
+                width: 22px;
+                height: 21px;
+
             }
         }
-    }
+}
 
+.menu{
+        font-family: 'Roboto', sans-serif;
+        padding-left: 15px;
+        h2{
+            font-weight: 300;
+            font-size: 16px;
+        }
+    
     .card{
         width: 100%;
         display: flex;
@@ -40,19 +52,60 @@
 
     .prix{
         text-align: end;
+        padding-right: 15px;
+        font-weight: bold;
     }
 
 
-    .title{
+}
 
-        h1{
-        font-family: "Shrikhand", serif;
-        font-weight: 400;
-        font-style: italic;
+.commande{
+        text-align: center;
+        .com{
+            padding: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+}
+
+/***Media Queries***/
+@media (min-width: 767.98px){
+
+.title{
+    box-sizing: border-box;
+
+
+    .image{
+
+        img{
+            height: 956px;
+            width: 100%;
+        }
+    
+    }
+
+    .resto{
+        justify-content: center;
+
+        i{
+            padding-left: 15px;
         }
     }
+}
 
-    .commande{
-        justify-content: center;
-    }
+.menu{
+    box-sizing: border-box;
+    padding-left: 180px;
+    padding-right: 180px;
+
+
+}
+
+.commande{
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+
 }

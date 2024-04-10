@@ -19,13 +19,16 @@ header {
 }
 header .logo {
   width: 100%;
+  padding-top: 10px;
+}
+header .logo img {
+  height: 40px;
 }
 header .location {
   padding-right: 10px;
 }
-header .arrow {
-  width: 100%;
-  text-align: center;
+header .arrownoshow {
+  display: none;
 }
 
 .bar-search {
@@ -35,14 +38,17 @@ header .arrow {
   gap: 17px;
   height: 50px;
   padding-top: 20px;
-  padding-left: 40%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  justify-self: center;
+  font-size: 16px;
+}
+.bar-search .place {
+  text-align: center;
 }
 
 input {
   background-color: #EAEAEA;
   border: none;
+  font-size: 16px;
 }
 
 input:focus {
@@ -54,12 +60,14 @@ input:focus {
   color: black;
   height: 19px;
   font-weight: 700;
+  font-size: 16px;
 }
 
 ::placeholder {
   color: black;
   height: 19px;
   font-weight: 700;
+  font-size: 16px;
 }
 
 /***Media Queries***/
@@ -100,6 +108,7 @@ input:focus {
 .fonctionnement {
   padding: 15px;
   background-color: white;
+  padding-left: 25px;
 }
 .fonctionnement .etapes {
   font-size: 16px;
@@ -123,6 +132,7 @@ input:focus {
 .restaurants {
   padding: 15px;
   padding-bottom: 30px;
+  padding-left: 25px;
 }
 .restaurants .card {
   background-color: white;
@@ -234,23 +244,34 @@ footer i {
     gap: 16px;
   }
 }
-.menu {
-  font-family: "Roboto", sans-serif;
-}
-.menu .logo {
-  display: flex;
-}
-.menu .title {
+.title {
+  font-family: "Shrikhand", serif;
   background-color: #F6F6F6;
   background-clip: border-box;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.menu .title .resto {
+.title .resto {
   display: flex;
   flex-direction: row;
 }
-.menu .title .resto h1 {
+.title .resto h1 {
+  font-size: 28px;
+  padding-left: 15px;
+}
+.title .resto i {
+  text-align: end;
+  padding-left: 35px;
+  padding-top: 20px;
+  width: 22px;
+  height: 21px;
+}
+
+.menu {
+  font-family: "Roboto", sans-serif;
+  padding-left: 15px;
+}
+.menu h2 {
   font-weight: 300;
   font-size: 16px;
 }
@@ -272,12 +293,42 @@ footer i {
 }
 .menu .prix {
   text-align: end;
+  padding-right: 15px;
+  font-weight: bold;
 }
-.menu .title h1 {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: italic;
+
+.commande {
+  text-align: center;
 }
-.menu .commande {
-  justify-content: center;
+.commande .com {
+  padding: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/***Media Queries***/
+@media (min-width: 767.98px) {
+  .title {
+    box-sizing: border-box;
+  }
+  .title .image img {
+    height: 956px;
+    width: 100%;
+  }
+  .title .resto {
+    justify-content: center;
+  }
+  .title .resto i {
+    padding-left: 15px;
+  }
+  .menu {
+    box-sizing: border-box;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .commande {
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
 }/*# sourceMappingURL=main.css.map */
