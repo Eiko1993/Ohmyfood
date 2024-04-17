@@ -28,20 +28,22 @@
         </div>
     </header>
     <main>
-        <section class="title">
-            <div>
-                <div class="image">
-                    <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Palette Gout">
+        <div class="image">
+            <img src="./Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Palette Gout">
+        </div>
+        <section class="bloc-menu">
+            <div class="bg-grey"></div>
+            <div class="title">
+                <h1>La palette du Goût</h1>
+                <div class="heart">
+                    <span class="heartempty"><i class="fa-regular fa-heart"></i></span>
+                    <span class="heartfull"><i class="fa-solid fa-heart"></i></span>
                 </div>
-                <div class="resto">
-                    <h1>La palette du Goût</h1>
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-
-        </section>
-        <section class="menu">
-            <h2>ENTREES</h2>
-            <div>
+            </div>
+            <div class="menu entrees">
+                <span class="bordercolor">
+                    <h2>ENTREES</h2>
+                </span>
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
@@ -50,6 +52,9 @@
                         </div>
                         <div class="prix">
                             <p>25<span class="euro">€</span></p>
+                        </div>
+                        <div class="checkmark">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
                 </article>
@@ -76,10 +81,8 @@
                     </div>
                 </article>
             </div>
-        </section>
-        <section class="menu">
-            <h2>PLATS</h2>
-            <div>
+            <div class="menu plats">
+                <h2>PLATS</h2>
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
@@ -114,10 +117,8 @@
                     </div>
                 </article>
             </div>
-        </section>
-        <section class="menu">
-            <h2>DESSERTS</h2>
-            <div>
+            <div class="menu desserts">
+                <h2>DESSERTS</h2>
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
@@ -152,12 +153,12 @@
                     </div>
                 </article>
             </div>
+            <div class="commande">
+                <button class="buttonsearch">
+                    <span class="com">Commander</span>
+                </button>
+            </div>
         </section>
-        <div class="commande">
-            <button class="buttonsearch">
-                <span class="com">Commander</span>
-            </button>
-        </div>
     </main>
     <footer>
         <nav class="nav">

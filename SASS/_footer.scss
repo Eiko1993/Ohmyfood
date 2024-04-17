@@ -19,7 +19,7 @@ footer{
     }
 
     a{
-        gap: 15px;
+        gap: 25px;
         color: white;
     }
 
@@ -39,9 +39,13 @@ footer{
         display: flex;
         flex-direction: row-reverse;
         gap: 25px;
-        justify-content: center;
+        justify-content: right;
+        margin-right: 30px;
     }
 
+    ul{
+        gap:10px;
+    }
     
     li{
         display: inline;

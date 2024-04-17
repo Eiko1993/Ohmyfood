@@ -3,13 +3,20 @@ header{
     font-family: 'Roboto', sans-serif;
     text-align: center;
     justify-content: center;
-
+    position: relative;
     
     .logo{
         width: 100%;
         padding-top: 10px;
         img{
             height: 40px;
+        }
+
+        
+        .fa-arrow-left{
+            position: absolute;
+            left: 50px;
+            top: 15px;
         }
      
     }
@@ -18,9 +25,10 @@ header{
         padding-right: 10px;
     }
 
-.arrownoshow{
-    display:none
-}
+    .arrownoshow{
+        display:none
+    }
+
 
 }
 
@@ -35,6 +43,10 @@ header{
         font-size: 16px;
         .place{
             text-align: center;
+        }
+
+        .loc{
+            padding-right: 5px;
         }
 
     }
@@ -60,5 +72,8 @@ header{
 
 /***Media Queries***/
 @media (min-width: 767.98px){
-
+.logo{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 }

@@ -4,7 +4,6 @@ body {
 
 main {
   font-family: "Roboto", sans-serif;
-  background-color: #F3F3F3;
   color: black;
 }
 
@@ -16,6 +15,7 @@ header {
   font-family: "Roboto", sans-serif;
   text-align: center;
   justify-content: center;
+  position: relative;
 }
 header .logo {
   width: 100%;
@@ -23,6 +23,11 @@ header .logo {
 }
 header .logo img {
   height: 40px;
+}
+header .logo .fa-arrow-left {
+  position: absolute;
+  left: 50px;
+  top: 15px;
 }
 header .location {
   padding-right: 10px;
@@ -43,6 +48,9 @@ header .arrownoshow {
 }
 .bar-search .place {
   text-align: center;
+}
+.bar-search .loc {
+  padding-right: 5px;
 }
 
 input {
@@ -71,11 +79,19 @@ input:focus {
 }
 
 /***Media Queries***/
+@media (min-width: 767.98px) {
+  .logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
 .reservation {
+  background-color: #F3F3F3;
   text-align: center;
-  padding-bottom: 25px;
+  padding: 25px;
 }
 .reservation h1 {
+  margin-top: 0px;
   font-size: 24px;
   font-weight: bold;
 }
@@ -109,10 +125,17 @@ input:focus {
   padding: 15px;
   background-color: white;
   padding-left: 25px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 .fonctionnement .etapes {
   font-size: 16px;
   font-weight: 500;
+}
+.fonctionnement .etapes .number {
+  position: absolute;
+  left: -20px;
 }
 .fonctionnement .stage {
   background-color: #F6F6F6;
@@ -130,9 +153,13 @@ input:focus {
 }
 
 .restaurants {
+  background-color: #F3F3F3;
   padding: 15px;
   padding-bottom: 30px;
   padding-left: 25px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 .restaurants .card {
   background-color: white;
@@ -149,7 +176,19 @@ input:focus {
   padding-top: 25px;
   padding-right: 25px;
 }
+.restaurants .heart .heartfull {
+  display: none;
+}
+.restaurants .heart:hover .heartempty {
+  display: none;
+}
+.restaurants .heart:hover .heartfull {
+  color: #9356DC;
+  display: inline;
+}
 .restaurants img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 200px;
   border-top-left-radius: 15px;
@@ -161,13 +200,36 @@ input:focus {
   font-weight: bold;
 }
 .restaurants p {
-  height: 24px;
   font-size: 17px;
   font-weight: 300;
 }
+.restaurants .nouveau {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #008766;
+  top: 100px;
+  left: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.restaurants .nouveau .new {
+  font-weight: bold;
+}
+.restaurants .nouveau-2 {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #008766;
+  top: 400px;
+  left: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.restaurants .nouveau-2 .new {
+  font-weight: bold;
+}
 .restaurants .like {
   height: 30px;
-  width: 10%;
+  width: 15%;
 }
 
 /***Media Queries***/
@@ -184,6 +246,7 @@ input:focus {
     display: flex;
     padding-right: 30px;
     gap: 50px;
+    padding-left: 25px;
   }
   .fonctionnement .etapes {
     padding-right: 60px;
@@ -200,6 +263,14 @@ input:focus {
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     padding-right: 180px;
+  }
+  .restaurants .nouveau {
+    top: 100px;
+    left: 775px;
+  }
+  .restaurants .nouveau-2 {
+    top: 100px;
+    left: 1575px;
   }
 }
 footer {
@@ -220,7 +291,7 @@ footer li {
   padding-bottom: 15px;
 }
 footer a {
-  gap: 15px;
+  gap: 25px;
   color: white;
 }
 footer i {
@@ -237,45 +308,86 @@ footer i {
     display: flex;
     flex-direction: row-reverse;
     gap: 25px;
-    justify-content: center;
+    justify-content: right;
+    margin-right: 30px;
+  }
+  footer ul {
+    gap: 10px;
   }
   footer li {
     display: inline;
     gap: 16px;
   }
 }
-.title {
+.image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+}
+
+.bloc-menu {
+  position: relative;
+  background-color: #f6f6f6;
+  max-width: 1055px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bloc-menu .heart {
+  padding-right: 25px;
+}
+.bloc-menu .heart .heartfull {
+  display: none;
+}
+.bloc-menu .heart:hover .heartempty {
+  display: none;
+}
+.bloc-menu .heart:hover .heartfull {
+  color: #9356DC;
+  display: inline;
+}
+.bloc-menu .bg-grey {
+  background-color: #f6f6f6;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: -50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.bloc-menu .title {
   font-family: "Shrikhand", serif;
-  background-color: #F6F6F6;
-  background-clip: border-box;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-}
-.title .resto {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
-.title .resto h1 {
-  font-size: 28px;
-  padding-left: 15px;
-}
-.title .resto i {
+.bloc-menu .title i {
   text-align: end;
-  padding-left: 35px;
-  padding-top: 20px;
+  padding-left: 25px;
+  padding-top: 30px;
   width: 22px;
   height: 21px;
 }
-
-.menu {
-  font-family: "Roboto", sans-serif;
+.bloc-menu .title .resto {
+  display: flex;
+  flex-direction: row;
+}
+.bloc-menu .title .resto h1 {
+  font-size: 28px;
   padding-left: 15px;
 }
-.menu h2 {
+.bloc-menu .menu {
+  font-family: "Roboto", sans-serif;
+}
+.bloc-menu .menu h2 {
+  display: block;
+  width: 6%;
   font-weight: 300;
   font-size: 16px;
+  border-bottom: 3px solid #99E2D0;
 }
-.menu .card {
+.bloc-menu .menu .card {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -284,23 +396,49 @@ footer i {
   padding: 10px;
   border-radius: 15px;
 }
-.menu .card-content {
+.bloc-menu .menu .card-content {
+  display: flex;
   background-color: white;
   color: black;
   padding-left: 13px;
   justify-content: space-between;
   border-radius: 15px;
 }
-.menu .prix {
+.bloc-menu .menu .prix {
   text-align: end;
   padding-right: 15px;
   font-weight: bold;
+  padding-top: 40px;
 }
-
-.commande {
+.bloc-menu .menu .checkmark {
+  box-sizing: border-box;
+  margin-left: -300px;
+  background-color: white;
+  padding-top: 40px;
+}
+.bloc-menu .menu .checkmark .fa-circle-check {
+  padding-left: 20px;
+  justify-content: center;
+  color: white;
+}
+.bloc-menu .menu .checkmark:hover {
+  margin: 0;
+  background-color: #99E2D0;
+  padding-top: 40px;
+  padding-right: 25px;
+  width: 20%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.bloc-menu .menu .checkmark:hover .fa-circle-check {
+  padding-left: 60px;
+  justify-content: center;
+  color: white;
+}
+.bloc-menu .commande {
   text-align: center;
 }
-.commande .com {
+.bloc-menu .commande .com {
   padding: 15px;
   margin-left: 20px;
   margin-right: 20px;
@@ -308,12 +446,14 @@ footer i {
 
 /***Media Queries***/
 @media (min-width: 767.98px) {
+  .image img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 383px;
+  }
   .title {
     box-sizing: border-box;
-  }
-  .title .image img {
-    height: 956px;
-    width: 100%;
   }
   .title .resto {
     justify-content: center;

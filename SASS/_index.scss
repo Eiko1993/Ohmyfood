@@ -1,7 +1,9 @@
 .reservation{
+    background-color: #F3F3F3;
     text-align: center;
-    padding-bottom: 25px;
+    padding: 25px;
     h1{
+        margin-top: 0px;
         font-size: 24px;
         font-weight: bold;
     }
@@ -35,9 +37,24 @@
     padding: 15px;
     background-color: white;
     padding-left: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+
+
     .etapes{
         font-size: 16px;
         font-weight: 500;
+
+        .number{
+            position: absolute;
+            left: -20px;
+    
+        }
+    
     }
     .stage{
         background-color:#F6F6F6;
@@ -53,11 +70,16 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+
 }
 .restaurants{
+    background-color: #F3F3F3;
     padding: 15px;
     padding-bottom: 30px;
     padding-left: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     .card{
         background-color: white;
         border-bottom-left-radius: 15px;
@@ -73,9 +95,28 @@
     .heart{
         padding-top: 25px;
         padding-right: 25px;
+        
+        .heartfull{
+            display: none;
+        }
+
+
+    }
+
+    .heart:hover{
+        
+        .heartempty{
+            display: none;
+        }
+        .heartfull{
+            color: #9356DC;
+            display: inline;
+        }
+
     }
 
     img{
+        object-fit: cover;
         width: 100%;
         height:200px;
         border-top-left-radius: 15px;
@@ -87,13 +128,39 @@
         font-weight: bold;
     }
     p{ 
-        height:24px;
         font-size: 17px;
         font-weight: 300;
     }
+
+    .nouveau{
+        position: absolute;
+        background-color:#99E2D0;
+        color:#008766;
+        top: 100px;
+        left: 350px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .new{
+            font-weight: bold;
+        }
+    }
+
+    .nouveau-2{
+        position: absolute;
+        background-color:#99E2D0;
+        color:#008766;
+        top: 400px;
+        left: 350px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .new{
+            font-weight: bold;
+        }
+    }
+
     .like{
         height:30px;
-        width:10%;
+        width:15%;
     }
 
 
@@ -119,6 +186,7 @@
             display: flex;
             padding-right: 30px;
             gap: 50px;
+            padding-left: 25px;
         }
         .etapes{
             padding-right: 60px;
@@ -126,6 +194,8 @@
         i{
             padding-right: 15px;
         }
+
+
     }
 
     .restaurants{
@@ -137,6 +207,16 @@
             gap: 100px;
             padding-right: 180px;
         }
+        .nouveau{
+            top:100px;
+            left: 775px;
+        }
+
+        .nouveau-2{
+            top: 100px;
+            left: 1575px;
+        }
+
     }
 
 }

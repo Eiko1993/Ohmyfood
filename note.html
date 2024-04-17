@@ -28,23 +28,27 @@
         </div>
     </header>
     <main>
-        <section class="title">
-            <div>
-                <img src="./Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La Note Enchantée">
-                <h1>La Nôte Enchantée</h1>
-                <i class="fa-thin fa-heart"></i>
+        <div class="image">
+            <img src="./Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La Note Enchantée">
+        </div>
+        <section class="bloc-menu">
+            <div class="bg-grey"></div>
+            <div class="title">
+                <h1>La Note Enchantée</h1>
+                <div class="heart">
+                    <span class="heartempty"><i class="fa-regular fa-heart"></i></span>
+                    <span class="heartfull"><i class="fa-solid fa-heart"></i></span>
+                </div>
             </div>
-        </section>
-        <section class="menu">
-            <h2>ENTREES</h2>
-            <div>
+            <div class="menu entrees">
+                <h2>ENTREES</h2>
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
-                            <h3>Ravioles de foie gras </h3>
+                            <h3>Ravioles de foie gras</h3>
                             <p>Accompagnées de leur crème à la truffe</p>
                         </div>
-                        <div class="prix"></div>
+                        <div class="prix">
                             <p>25<span class="euro">€</span></p>
                         </div>
                     </div>
@@ -52,7 +56,7 @@
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
-                            <h3>Caviar osciètre </h3>
+                            <h3>Caviar osciètre</h3>
                             <p>Sur blini à la farine de blé noir</p>
                         </div>
                         <div class="prix">
@@ -78,15 +82,13 @@
                             <p>Confiture de figue et pain toasté</p>
                         </div>
                         <div class="prix">
-                            <p>35<span class="euro">€</span></p>
+                            <p>40<span class="euro">€</span></p>
                         </div>
                     </div>
                 </article>
             </div>
-        </section>
-        <section class="menu">
-            <h2>PLATS</h2>
-            <div>
+            <div class="menu plats">
+                <h2>PLATS</h2>
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
@@ -121,10 +123,8 @@
                     </div>
                 </article>
             </div>
-        </section>
-        <section class="menu">
-            <h2>DESSERTS</h2>
-            <div>
+            <div class="menu desserts">
+                <h2>DESSERTS</h2>
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
@@ -150,7 +150,7 @@
                 <article class="card">
                     <div class="card-content">
                         <div class="content">
-                            <h3>Tarte au citron meringuée </h3>
+                            <h3>Tarte au citron meringuée</h3>
                             <p>Déstructurée</p>
                         </div>
                         <div class="prix">
@@ -159,10 +159,13 @@
                     </div>
                 </article>
             </div>
+            <div class="commande">
+                <button class="buttonsearch">
+                    <span class="com">Commander</span>
+                </button>
+            </div>
         </section>
-        <button class="buttonsearch">
-            <span>Commander</span>
-        </button>
+    </main>
     </main>
     <footer>
         <nav class="nav">
