@@ -110,7 +110,7 @@ input:focus {
 .buttonsearch {
   font-family: "Roboto", sans-serif;
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC 100%);
   height: 50px;
   border-radius: 25px;
   box-shadow: 0, 4, 10, 0;
@@ -119,6 +119,9 @@ input:focus {
   font-weight: 500;
   border: none;
   text-align: center;
+}
+.buttonsearch:hover {
+  filter: brightness(115%);
 }
 
 .fonctionnement {
@@ -132,10 +135,20 @@ input:focus {
 .fonctionnement .etapes {
   font-size: 16px;
   font-weight: 500;
+  padding-left: 20px;
 }
 .fonctionnement .etapes .number {
   position: absolute;
-  left: -20px;
+  left: -15px;
+  color: white;
+  border-radius: 50%;
+  background-color: #9356DC;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .fonctionnement .stage {
   background-color: #F6F6F6;
@@ -145,11 +158,13 @@ input:focus {
   padding-top: 30px;
   padding-bottom: 30px;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+  width: 25%;
 }
 .fonctionnement i {
   color: #9356DC;
   padding-left: 10px;
   padding-right: 10px;
+  border: #9356DC;
 }
 
 .restaurants {
@@ -157,34 +172,34 @@ input:focus {
   padding: 15px;
   padding-bottom: 30px;
   padding-left: 25px;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
 .restaurants .card {
+  position: relative;
   background-color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.restaurants .card-content {
+.restaurants .card .card-content {
   display: flex;
   justify-content: space-between;
   color: black;
   padding-left: 13px;
 }
-.restaurants .heart {
+.restaurants .card .card-content .heart {
   padding-top: 25px;
   padding-right: 25px;
 }
-.restaurants .heart .heartfull {
+.restaurants .card .card-content .heart .heartfull {
   display: none;
 }
-.restaurants .heart:hover .heartempty {
+.restaurants .card .heart:hover .heartempty {
   display: none;
 }
-.restaurants .heart:hover .heartfull {
-  color: #9356DC;
+.restaurants .card .heart:hover .heartfull {
   display: inline;
+  color: #9356DC;
 }
 .restaurants img {
   -o-object-fit: cover;
@@ -207,24 +222,12 @@ input:focus {
   position: absolute;
   background-color: #99E2D0;
   color: #008766;
-  top: 100px;
-  left: 350px;
+  top: 15px;
+  right: 15px;
   padding-left: 20px;
   padding-right: 20px;
 }
 .restaurants .nouveau .new {
-  font-weight: bold;
-}
-.restaurants .nouveau-2 {
-  position: absolute;
-  background-color: #99E2D0;
-  color: #008766;
-  top: 400px;
-  left: 350px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.restaurants .nouveau-2 .new {
   font-weight: bold;
 }
 .restaurants .like {
@@ -265,12 +268,7 @@ input:focus {
     padding-right: 180px;
   }
   .restaurants .nouveau {
-    top: 100px;
-    left: 775px;
-  }
-  .restaurants .nouveau-2 {
-    top: 100px;
-    left: 1575px;
+    top: 10px;
   }
 }
 footer {
@@ -335,6 +333,8 @@ footer i {
 }
 .bloc-menu .heart {
   padding-right: 25px;
+  width: 22px;
+  height: 21px;
 }
 .bloc-menu .heart .heartfull {
   display: none;
@@ -377,8 +377,47 @@ footer i {
   font-size: 28px;
   padding-left: 15px;
 }
+.bloc-menu .lds-dual-ring {
+  color: #9356DC;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+.bloc-menu .lds-dual-ring,
+.bloc-menu .lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.bloc-menu .lds-dual-ring {
+  display: inline-block;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+.bloc-menu .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: 1s linear lds-dual-ring forwards;
+  animation-iteration-count: 5;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
 .bloc-menu .menu {
   font-family: "Roboto", sans-serif;
+  opacity: 0;
 }
 .bloc-menu .menu h2 {
   display: block;
@@ -397,12 +436,54 @@ footer i {
   border-radius: 15px;
 }
 .bloc-menu .menu .card-content {
+  flex: 1;
   display: flex;
   background-color: white;
   color: black;
   padding-left: 13px;
   justify-content: space-between;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.bloc-menu .menu .card-content:hover > .checkmark {
+  animation: 0.3s linear checktrue;
+  opacity: 1;
+  right: -75px;
+  transform: translateX(-75px);
+}
+.bloc-menu .menu .card-content:hover > .prix {
+  text-align: center;
+  animation: 0.3s linear pricetrue;
+  transform: translateX(-75px);
+}
+.bloc-menu .menu .card-content:not(:hover) > .checkmark {
+  animation: 0.3s checkfalse;
+  right: -50px;
+  transform: translateX(0);
+  opacity: 0;
+}
+.bloc-menu .menu .card-content:not(:hover) > .prix {
+  text-align: center;
+  animation: 0.3s linear pricefalse;
+  transform: translateX(0);
+}
+.bloc-menu .menu .card-content .checkmark {
+  background-color: #99E2D0;
+  width: 75px;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -10px;
+  opacity: 0;
+}
+.bloc-menu .menu .card-content .checkmark .fa-circle-check {
+  display: flex;
+  padding-left: 20px;
+  justify-content: center;
+  color: white;
+  padding: 40px 17px;
 }
 .bloc-menu .menu .prix {
   text-align: end;
@@ -410,35 +491,83 @@ footer i {
   font-weight: bold;
   padding-top: 40px;
 }
-.bloc-menu .menu .checkmark {
-  box-sizing: border-box;
-  margin-left: -300px;
-  background-color: white;
-  padding-top: 40px;
+@keyframes checktrue {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-37px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-75px);
+  }
 }
-.bloc-menu .menu .checkmark .fa-circle-check {
-  padding-left: 20px;
-  justify-content: center;
-  color: white;
+@keyframes checkfalse {
+  0% {
+    opacity: 1;
+    transform: translateX(-75px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-37px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
 }
-.bloc-menu .menu .checkmark:hover {
-  margin: 0;
-  background-color: #99E2D0;
-  padding-top: 40px;
-  padding-right: 25px;
-  width: 20%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+@keyframes pricetrue {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-37px);
+  }
+  100% {
+    transform: translateX(-75px);
+  }
 }
-.bloc-menu .menu .checkmark:hover .fa-circle-check {
-  padding-left: 60px;
-  justify-content: center;
-  color: white;
+@keyframes pricefalse {
+  0% {
+    transform: translateX(-75px);
+  }
+  50% {
+    transform: translateX(-37px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-.bloc-menu .commande {
+.bloc-menu .entrees {
+  animation: 1s linear menuload forwards;
+}
+@keyframes menuload {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.bloc-menu .plats {
+  animation: 1s linear menuload forwards;
+  animation-delay: 2s;
+}
+.bloc-menu .desserts {
+  animation: 1s linear menuload forwards;
+  animation-delay: 4s;
+}
+
+.commande {
   text-align: center;
 }
-.bloc-menu .commande .com {
+.commande .com {
   padding: 15px;
   margin-left: 20px;
   margin-right: 20px;

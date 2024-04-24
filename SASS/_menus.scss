@@ -1,3 +1,5 @@
+
+
 .image{
     img{
         width: 100%;
@@ -15,7 +17,8 @@
     
     .heart{
         padding-right: 25px;
-        
+        width: 22px;
+        height: 21px;
         .heartfull{
             display: none;
         }
@@ -29,7 +32,7 @@
             display: none;
         }
         .heartfull{
-            color: #9356DC;
+            color:#9356DC;
             display: inline;
         }
 
@@ -73,9 +76,49 @@
         }
     }
 
+    .lds-dual-ring {
+        color: #9356DC;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+      }
+      .lds-dual-ring,
+      .lds-dual-ring:after {
+        box-sizing: border-box;
+      }
+      .lds-dual-ring {
+        display: inline-block;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6.4px solid currentColor;
+        border-color: currentColor transparent currentColor transparent;
+        animation: 1s linear lds-dual-ring forwards;
+        animation-iteration-count: 5;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+
     .menu{
         font-family: 'Roboto', sans-serif;
-
+        opacity: 0;
         h2{
             display: block;
             width:6%;
@@ -94,50 +137,179 @@
             border-radius: 15px;
         }
         .card-content{
+            flex: 1;
             display: flex;
             background-color: white;
             color: black;
             padding-left: 13px;
             justify-content: space-between;
             border-radius: 15px;
-        }
+            position: relative;
+            overflow: hidden;
 
-        .prix{
-            text-align: end;
-            padding-right: 15px;
-            font-weight: bold;
-            padding-top: 40px;
-        }
+            &:hover{
+                & > .checkmark{
+                    animation: 0.3s linear checktrue;
+                    opacity: 1;
+                    right: -75px;
+                    transform: translateX(-75px);
+                }
 
-        .checkmark{
-            box-sizing: border-box;
-            margin-left: -300px;
-            background-color:white;
-            padding-top: 40px;
-            
-            .fa-circle-check{
-                padding-left: 20px;
-                justify-content: center;
-                color: white;
+                & > .prix{
+                    text-align: center;
+                    animation: 0.3s linear pricetrue;
+                    transform: translateX(-75px);
+                }
+
+
             }
+
+            &:not(:hover){
+                & > .checkmark{
+                    animation: 0.3s checkfalse;
+                    right: -50px;
+                    transform: translateX(0);
+                    opacity: 0;
+                }
+
+                & > .prix{
+                    text-align: center;
+                    animation: 0.3s linear pricefalse;
+                    transform: translateX(0);
+                }
+
+
+            }
+
+            .checkmark{
+                background-color:#99E2D0;
+                width: 75px;
+                height: 100%;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                position: absolute;
+                right: -10px;
+                opacity: 0;
+                .fa-circle-check{
+                    display: flex;
+                    padding-left: 20px;
+                    justify-content: center;
+                    color: white;
+                    padding: 40px 17px;
+                    }
+                }
+
+            }
+            .prix{
+                text-align: end;
+                padding-right: 15px;
+                font-weight: bold;
+                padding-top: 40px;
+            }
+    
         }
 
-        .checkmark:hover{
-            margin: 0;
-            background-color:#99E2D0;
-            padding-top: 40px;
-            padding-right: 25px;
-            width: 20%;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            
-            .fa-circle-check{
-                padding-left: 60px;
-                justify-content: center;
-                color: white;
+        @keyframes checktrue{
+
+            0%{
+                opacity: 0;
+                transform: translateX(0);
             }
+
+            50%{
+                opacity: 0.5;
+                transform: translateX(-37px);
+            }
+
+
+            100%{
+                opacity: 1;
+                transform: translateX(-75px);
+            }
+
+
+        }
+
+        @keyframes checkfalse{
+            0% {
+                opacity:1;
+                transform: translateX(-75px);
+                }
+                
+            50%{
+                opacity: 0.5;
+                transform: translateX(-37px);
+            }
+
+            100% {
+                opacity:0;
+                transform: translateX(0);
+                }
+        }
+
+        @keyframes pricetrue{
+
+            0%{
+                transform: translateX(0);
+            }
+
+            50%{
+                transform: translateX(-37px);
+            }
+
+
+            100%{
+                transform: translateX(-75px);
+            }
+
+        }
+
+        @keyframes pricefalse{
+            0% {
+                transform: translateX(-75px);
+                }
+                
+            50%{
+                transform: translateX(-37px);
+            }
+
+            100% {
+                transform: translateX(0);
+                }
+        }
+        
+    .entrees{
+        animation: 1s linear menuload forwards;
+    }
+
+    @keyframes menuload{
+
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 0.5;
+        }
+
+        100%{
+            opacity:1;
         }
     }
+
+    .plats{
+        animation: 1s linear menuload forwards;
+        animation-delay: 2s;
+    }
+
+    .desserts{
+        animation: 1s linear menuload forwards;
+        animation-delay: 4s;
+    }
+
+}
+
+
     .commande{
         text-align: center;
         .com{
@@ -146,7 +318,7 @@
             margin-right: 20px;
         }
     }
-}
+
 
 /***Media Queries***/
 @media (min-width: 767.98px){

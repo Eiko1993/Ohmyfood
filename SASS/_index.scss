@@ -23,7 +23,7 @@
 .buttonsearch{
     font-family: 'Roboto', sans-serif;
     color: white;
-    background:linear-gradient(#FF79DA,#9356DC);
+    background:linear-gradient( #FF79DA ,#9356DC 100%);
     height: 50px;
     border-radius: 25px;
     box-shadow:0,4,10,0;
@@ -32,6 +32,11 @@
     font-weight: 500;
     border: none;
     text-align: center;
+
+
+    &:hover{
+        filter: brightness(115%);
+    }
 }
 .fonctionnement{
     padding: 15px;
@@ -43,16 +48,23 @@
 
 
 
-
-
     .etapes{
         font-size: 16px;
         font-weight: 500;
+        padding-left: 20px;
 
         .number{
             position: absolute;
-            left: -20px;
-    
+            left: -15px;
+            color: white;
+            border-radius: 50%;
+            background-color: #9356DC;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
         }
     
     }
@@ -64,11 +76,13 @@
         padding-top: 30px;
         padding-bottom:30px;
         filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+        width: 25%;
     }
     i{
         color: #9356DC;
         padding-left: 10px;
         padding-right: 10px;
+        border: #9356DC;
     }
 
 }
@@ -77,43 +91,47 @@
     padding: 15px;
     padding-bottom: 30px;
     padding-left: 25px;
-    position: relative;
+  
     margin-left: auto;
     margin-right: auto;
     .card{
+        position: relative;
         background-color: white;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-    }
-    .card-content{
-        display: flex;
-        justify-content: space-between;
-        color: black;
-        padding-left: 13px;
-    }
 
-    .heart{
-        padding-top: 25px;
-        padding-right: 25px;
+        .card-content{
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            padding-left: 13px;
+            .heart{
+                padding-top: 25px;
+                padding-right: 25px;
+                
+                .heartfull{
+                    display: none;
+                }
         
-        .heartfull{
-            display: none;
+
+    
+            }
         }
 
-
-    }
-
-    .heart:hover{
+        .heart:hover{
         
-        .heartempty{
-            display: none;
-        }
-        .heartfull{
-            color: #9356DC;
-            display: inline;
-        }
+            .heartempty{
+                display: none;
+            }
+            .heartfull{
+                display: inline;
+                color:#9356DC;
+            }
 
+        }
     }
+
+
 
     img{
         object-fit: cover;
@@ -136,8 +154,8 @@
         position: absolute;
         background-color:#99E2D0;
         color:#008766;
-        top: 100px;
-        left: 350px;
+        top: 15px;
+        right: 15px;
         padding-left: 20px;
         padding-right: 20px;
         .new{
@@ -145,18 +163,6 @@
         }
     }
 
-    .nouveau-2{
-        position: absolute;
-        background-color:#99E2D0;
-        color:#008766;
-        top: 400px;
-        left: 350px;
-        padding-left: 20px;
-        padding-right: 20px;
-        .new{
-            font-weight: bold;
-        }
-    }
 
     .like{
         height:30px;
@@ -202,19 +208,14 @@
             box-sizing: border-box;
             padding-left: 180px;
         .restos{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            padding-right: 180px;
-        }
-        .nouveau{
-            top:100px;
-            left: 775px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 100px;
+                padding-right: 180px;
         }
 
-        .nouveau-2{
-            top: 100px;
-            left: 1575px;
+        .nouveau{
+                top: 10px;
         }
 
     }
