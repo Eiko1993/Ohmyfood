@@ -102,8 +102,8 @@
         border-radius: 50%;
         border: 6.4px solid currentColor;
         border-color: currentColor transparent currentColor transparent;
-        animation: 1s linear lds-dual-ring forwards;
-        animation-iteration-count: 5;
+        animation: 3s linear lds-dual-ring forwards;
+
       }
       @keyframes lds-dual-ring {
         0% {
