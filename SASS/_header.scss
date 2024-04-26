@@ -4,7 +4,9 @@ header{
     text-align: center;
     justify-content: center;
     position: relative;
-    
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    padding-top: 5px;
+    padding-bottom: 10px;
     .logo{
         width: 100%;
         padding-top: 10px;
@@ -15,65 +17,22 @@ header{
         
         .fa-arrow-left{
             position: absolute;
-            left: 50px;
-            top: 15px;
+            left: 20px;
+            top: 30px;
+
+
+
         }
      
     }
 
-    .location{
-        padding-right: 10px;
-    }
-
-    .arrownoshow{
-        display:none
-    }
-
 
 }
-
-    .bar-search{
-        border-top: 2px solid #F2F2F2;
-        border-bottom: 2px solid #F2F2F2;
-        background-color: #EAEAEA;
-        gap:17px;
-        height:50px;
-        padding-top: 20px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-size: 16px;
-        .place{
-            text-align: center;
-        }
-
-        .loc{
-            padding-right: 5px;
-        }
-
-    }
-
-    input{
-        background-color: #EAEAEA;
-        border: none;
-        font-size: 16px;
-    }
-
-    input:focus{
-        background-color: #EAEAEA;
-        outline: none;
-    }
-
-    ::placeholder{
-        color: black;
-        height:19px;
-        font-weight: 700;
-        font-size: 16px;
-}
-
 
 /***Media Queries***/
 @media (min-width: 767.98px){
-.logo{
-    margin-top: 15px;
-    margin-bottom: 15px;
+header{
+padding-top: 10px;
+padding-bottom: 15px;
 }
 }
