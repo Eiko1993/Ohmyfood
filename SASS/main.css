@@ -499,6 +499,8 @@ footer i {
 .bloc-menu .menu {
   font-family: "Roboto", sans-serif;
   opacity: 0;
+  width: 100%;
+  min-width: 0;
 }
 .bloc-menu .menu h2 {
   display: block;
@@ -509,6 +511,7 @@ footer i {
 }
 .bloc-menu .menu .card {
   width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -518,8 +521,10 @@ footer i {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
 }
 .bloc-menu .menu .card .card-content {
+  width: 100%;
   overflow: hidden;
   flex: 1;
+  min-width: 0;
   display: flex;
   background-color: white;
   color: black;
@@ -527,11 +532,44 @@ footer i {
   justify-content: space-between;
   border-radius: 15px;
   position: relative;
-  overflow: hidden;
 }
-.bloc-menu .menu .card .card-content:hover {
+.bloc-menu .menu .card .card-content h3 {
+  overflow: hidden;
+  white-space: nowrap;
   text-wrap: nowrap;
   text-overflow: ellipsis;
+}
+.bloc-menu .menu .card .card-content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.bloc-menu .menu .card .card-content:hover {
+  overflow: hidden;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.bloc-menu .menu .card .card-content:hover > .card {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.bloc-menu .menu .card .card-content:hover > .content {
+  width: 40%;
+  min-width: 0;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bloc-menu .menu .card .card-content:hover > .content h3 {
+  width: 90%;
+}
+.bloc-menu .menu .card .card-content:hover > .content p {
+  width: 80%;
 }
 .bloc-menu .menu .card .card-content:hover > .checkmark {
   animation: 0.3s linear checktrue;
@@ -540,6 +578,7 @@ footer i {
   transform: translateX(-75px);
 }
 .bloc-menu .menu .card .card-content:hover > .prix {
+  width: 10%;
   text-align: center;
   animation: 0.3s linear pricetrue;
   transform: translateX(-75px);
@@ -554,6 +593,12 @@ footer i {
   text-align: center;
   animation: 0.3s linear pricefalse;
   transform: translateX(0);
+}
+.bloc-menu .menu .card .card-content .content {
+  flex: 1;
+  width: 70%;
+  min-width: 0;
+  overflow: hidden;
 }
 .bloc-menu .menu .card .card-content .checkmark {
   background-color: #99E2D0;
@@ -573,10 +618,19 @@ footer i {
   padding: 40px 17px;
 }
 .bloc-menu .menu .card .prix {
+  width: 20%;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
   text-align: end;
-  padding-right: 15px;
   font-weight: bold;
   padding-top: 40px;
+  min-width: 0;
+}
+.bloc-menu .menu .card .prix p {
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
 }
 @keyframes checktrue {
   0% {
