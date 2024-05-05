@@ -2,12 +2,14 @@ footer{
     font-family: 'Roboto', sans-serif;
     background-color: rgba(53, 53, 53, 1);
     color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
     
     h3{
         padding-left: 40px;
         font-family: "Shrikhand", serif;
         font-weight: 400;
-        font-style: italic;
+
     }
 
     ul{
@@ -15,11 +17,10 @@ footer{
     }
 
     li{
-        padding-bottom: 15px;
+        padding-bottom: 10px;
     }
 
     a{
-        gap: 25px;
         color: white;
     }
 
@@ -30,7 +31,6 @@ footer{
 
 
 
-/***Media Queries***/
 @media (min-width: 767.98px){
 footer{
     padding-top: 50px;
