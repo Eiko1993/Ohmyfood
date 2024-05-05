@@ -535,7 +535,7 @@ footer i {
   border-bottom: 3px solid #99E2D0;
 }
 .bloc-menu .menu .card {
-  width: 100%;
+  width: 90%;
   min-width: 0;
   display: flex;
   flex-direction: column;
